@@ -52,7 +52,7 @@ def CBOSort(tab):
 def complexitySort(tab): 
 
 
-	return int(tab[-3])
+	return int(tab[-2])
 
 def complexity(path):
 	complexityMcCabe(path)
