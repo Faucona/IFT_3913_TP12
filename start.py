@@ -216,13 +216,10 @@ print("complexity")
 complexity(sys.argv[1])
 
 
-print("documentation")
 documentation(sys.argv[1])
 
 
-print("q1")
 q1(tabTotalFile)
 
 
-print("q2")
 q2()
