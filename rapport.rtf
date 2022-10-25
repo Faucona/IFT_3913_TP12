@@ -3,7 +3,7 @@
 }
 {\colortbl;\red255\green255\blue255;\red47\green255\blue18;\red0\green0\blue0;}
 {\*\expandedcolortbl;;\cssrgb\c15686\c99608\c7843;\csgray\c0\c90000;}
-\vieww19580\viewh16000\viewkind1\viewscale170
+\vieww21120\viewh16000\viewkind1\viewscale170
 \deftab720
 \pard\pardeftab720\ri0\sl259\slmult1\sa160\qj\partightenfactor0
 
@@ -50,22 +50,74 @@ Q1 : Le niveau de documentation des classes est-il appropri\'e9 par rapport \'e0
 En moyenne, les fichier ont une densit\'e9 de commentaire de 0.5986 et une complexit\'e9 de  9.8045. A un seuil de complexit\'e9 de 10% , on observe que les classes \'e0 ce seuil ont une densit\'e9 de commentaire moyenne de 0.4584. Au seuil de 30%, une densit\'e9 moyenne de 0.5118. Au seuil de 60%, une densit\'e9 moyenne de 0.5302 et quand on atteint le seuil de 90%, la densit\'e9 de commentaire est en moyenne de 0.5697. On peut donc affirmer qu\'92il y a une correlation positive entre la complexit\'e9 des classes et leur niveau de complexit\'e9.\
 \
 \
+Output:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf2 \cb3 \CocoaLigature0 en moyenne les fichiers ont une densit\'e9 de commentaire de  : 0.5986\
+en moyenne les fichiers ont une complexity de  : 9.8045\
+\'e0 un seuil de 10% les fichiers ont en moyenne une densit\'e9 de  : 0.4584\
+\'e0 un seuil de 30% les fichiers ont en moyenne une densit\'e9 de  : 0.5118\
+\'e0 un seuil  60% les fichiers ont en moyenne une densit\'e9 de  : 0.5302\
+\'e0 un seuil  90% les fichiers ont en moyenne une densit\'e9 de  : 0.5697
+\f0\fs22 \cf0 \cb1 \CocoaLigature1 \
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\qj\partightenfactor0
+\cf0 \
+\
+\
+\
+\
+\
+\
 \
 Q2 : La conception est-elle bien modulaire ?\
+Selon nos calculs, a un seuil de complexit\'e9 de 10%, les classes ont un couplage de 29.4747 et a un seuil de 15%, un couplage de 24.5. Donc, selon notre hypoth\'e8se on a bien que les 10% et 15% des classes les plus complexes ont un CBO \'e9lev\'e9 ce qui nuis \'e0 la modularit\'e9 du logiciel.\
 \
+Output:\
 \
-\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf2 \cb3 \CocoaLigature0 \'e0 un seuil  10% les fichiers ont un CBO de  : 29.4747\
+\'e0 un seuil  15% les fichiers ont un CBO de  : 24.5          
+\f0\fs22 \cf0 \cb1 \CocoaLigature1 \
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\qj\partightenfactor0
+\cf0 \
 \
 \
 \
 \
 Q3 : Le code est-il mature ?\
+Selon nos calculs, la densit\'e9 moyenne des commentaire au sein du logiciel est de 0.5986 ce qui indique un au niveau de documentation. Aussi, si on regarde le ratio taille code/ taille test, on a qu\'92en moyenne, la taille d\'92un fichier test correspond \'e0 244.55% de la taille de son fichier test\'e9. Ce fort ratio nous indique que les classes ont bien \'e9t\'e9 test\'e9es avec le temps et indique donc un certain niveau de maturit\'e9.\
 \
+Output:\
 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf2 \cb3 \CocoaLigature0 en moyenne la taille fichier d'un fichier test est : 244.55% de son fichier tester\
+ecart type de la taille d'un fichier test est : 0.0\
+en moyenne les fichiers ont une densit\'e9 de commentaire de  : 0.5986\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\qj\partightenfactor0
+
+\f0\fs22 \cf0 \cb1 \CocoaLigature1 \
 \
 \
 \
 Q4 : Le code peut-il \'eatre test\'e9 bien automatiquement ? \
+Dans ce logiciel, il y a un total de 1023 classes dont 669 classes non test\'e9es. 65.4% des classes dans ce logiciel ne sont donc pas test\'e9es. On a \'e9galement calcul\'e9 le CBO (coupling between objects) des classes non test\'e9es comme \'e9tant de 0.1659 ce qui est plut\'f4t bas. On peut donc argumenter que bien qu\'92un faible pourcentage des classes de ce logiciel a \'e9t\'e9 test\'e9, puisque que le reste non test\'e9 a un faible couplage, \'e7a limite les d\'e9g\'e2ts.\
+\
+Output:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf2 \cb3 \CocoaLigature0 nombre de classe total : 1023\
+nombre de classe tester : 1\
+nombre de classe non tester : 669\
+nombre de classeTest non associ\'e9 \'e0 une classe repertori\'e9 : 352\
+pourcentage de classe non tester : 65.4%\
+en moyenne les fichier non tester on un CBO de : 0.1659\
+\pard\pardeftab720\ri0\sl259\slmult1\sa160\qj\partightenfactor0
+
+\f0\fs22 \cf0 \cb1 \CocoaLigature1 \
 \
 
 \f1 \
@@ -75,26 +127,4 @@ Q4 : Le code peut-il \'eatre test\'e9 bien automatiquement ? \
 \
 \
 \
-\
-\
-\
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
-
-\f2\fs24 \cf2 \cb3 \CocoaLigature0 nombre de classe total : 1023\
-nombre de classe tester : 1\
-nombre de classe non tester : 669\
-nombre de classeTest non associ\'e9 \'e0 une classe repertori\'e9 : 352\
-pourcentage de classe non tester : 65.4%\
-en moyenne les fichier non tester on un CBO de : 0.1659\
-en moyenne la taille fichier d'un fichier test est : 244.55% de son fichier tester\
-ecart type de la taille d'un fichier test est : 0.0\
-en moyenne les fichiers ont une densit\'e9 de commentaire de  : 0.5986\
-en moyenne les fichiers ont une complexity de  : 9.8045\
-\'e0 un seuil de 10% les fichiers ont en moyenne une densit\'e9 de  : 0.4584\
-\'e0 un seuil de 30% les fichiers ont en moyenne une densit\'e9 de  : 0.5118\
-\'e0 un seuil  60% les fichiers ont en moyenne une densit\'e9 de  : 0.5302\
-\'e0 un seuil  90% les fichiers ont en moyenne une densit\'e9 de  : 0.5697
-\f1\fs22 \cf0 \cb1 \CocoaLigature1 \
-\pard\pardeftab720\ri0\sl259\slmult1\sa160\qj\partightenfactor0
-\cf0 \
 }

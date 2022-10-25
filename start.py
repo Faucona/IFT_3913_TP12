@@ -49,8 +49,10 @@ def documentation(path):
 def CBOSort(tab):
 	return int(tab[-1])
 
-def complexitySort(tab):
-	return int(tab[-2])
+def complexitySort(tab): 
+
+
+	return int(tab[-3])
 
 def complexity(path):
 	complexityMcCabe(path)
@@ -131,8 +133,15 @@ def q2():
 	tab = couple(sys.argv[1])
 	threshold10 = math.ceil(10/100 *len(tab))
 	threshold15 = math.ceil(15/100 *len(tab))
+
+
+
+
 	tab1 = sorted(tab,key=CBOSort,reverse=True)
+	print("tab1 ok")
 	tab2 = sorted(tab,key=complexitySort,reverse=True)
+	print("tab2 ok")
+
 	temptab1 = []
 	temptab2 = []
 	moyenne10Complexity = 0 
@@ -161,15 +170,15 @@ def q2():
 		for j in range(threshold10):
 			if(tab1[i][0] == tab2[j][0]):
 				temptab1.append(tab1[i])
-				moyenne10Complexity += int(tab1[i][-2])
-				moyenne10CBO += int(tab1[i][-1])
+				moyenne10Complexity += int(float(tab1[i][-2]))
+				moyenne10CBO += int(float(tab1[i][-1]))
 				break
 	for i in range(threshold15):
 		for j in range(threshold15):
 			if(tab1[i][0] == tab2[j][0]):
 				temptab2.append(tab1[i])
-				moyenne15Complexity += int(tab1[i][-2])
-				moyenne15CBO += int(tab1[i][-1])
+				moyenne15Complexity += int(float(tab1[i][-2]))
+				moyenne15CBO += int(float(tab1[i][-1]))
 				break
 	
 	
@@ -198,8 +207,22 @@ def q2():
 
 
 def couple(path):
-	return lcsec.result(path,"mcCabe.csv")
+	result = lcsec.result(path,"mcCabe.csv")
+	print("ok")
+	return result
+
+
+print("complexity")
 complexity(sys.argv[1])
+
+
+print("documentation")
 documentation(sys.argv[1])
+
+
+print("q1")
 q1(tabTotalFile)
+
+
+print("q2")
 q2()
