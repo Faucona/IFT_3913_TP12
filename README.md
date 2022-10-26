@@ -1,5 +1,9 @@
 # IFT_3913_TP2
 
+Aleck Gibbs
+Ethan Mai
+
+
 Documentation: 
 
 
